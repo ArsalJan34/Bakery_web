@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Outfit:wght@100..900&family=Short+Stack&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Smooth scroll and font */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body{
+  background: white;
+}
+.home{
+  background-image: url(./images/HERO-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+}
+ .header{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 8%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+ }
+
+.navbar a{
+display: inline-block;
+font-size: 25px;
+color:white;
+font-weight: 500;
+text-decoration: none;
+margin: 0 15px;
+transition: .3s ease;
+animation: slideTop ease forwards;
+animation-delay: calc(.2s * var(-i));
+}
+.navbar a:hover,
+.navbar a.active {
+  color: rgb(209, 169, 140);
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 25px;
+  z-index: 999;
+  transition: right 0.4s ease;
+}
+
+.sidebar.show {
+  right: 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 18px 0;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: rgb(209, 169, 140);
+}
+
+.sidebar .bx-x {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* =============== MENU ICON =============== */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon .bx-menu {
+  color: white;
+  font-size: 32px;
+}
+.logo{
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 20px;
+}
+.home-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  left: 8%;
+}
+.home-content h3{
+color: white;
+font-size: 60px;
+}
+.home-content p{
+  color: rgb(241, 197, 166);
+  font-size: 50px;
+}
+
+.btn {
+  position: relative;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 25px;
+  background: rgb(74, 42, 22);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: .3s ease;
+  cursor: pointer;
+  overflow: visible;
+
+
+}
+.btn::after {
+  content: "🍪";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+.btn:hover::after {
+  transform: translateY(-50%) translateX(10px) scale(1.2);
+  opacity: 1;
+}
+.sectiontitle1{
+  text-align: center;
+  margin: 30px 0 5px 0;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Outfit';
+  font-style: normal;
+}
+.items{
+display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 3rem;
+  justify-items: center;
+
+}
+.card {
+  background: url(./images/dishbg.png);
+  border: 2px solid #605c5c;
+  border-radius: 14px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+  max-width: 500px;
+  margin: auto;
+}
+
+.card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+
+.card h3 {
+  color: white;
+
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.new-price {
+  color: white;
+
+}
+
+.old-price {
+  color: red;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.buy {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  color: rgb(206, 206, 213);
+  background: black;
+  border: 1px gray solid;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 8px;
+
+}
+.discount {
+  background-image: url(./images/discountbanner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.discount h3 {
+color: rgb(71, 35, 13);
+font-size: 40px;
+}
+.discount p{
+  font-size: 20px;
+  max-width: 500px;
+  color: black;
+ font-family: 'Short+Stack';
+}
+
