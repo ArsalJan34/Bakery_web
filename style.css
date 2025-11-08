@@ -303,41 +303,49 @@ font-size: 40px;
 /* 📱 RESPONSIVE DESIGN SECTION */
 /* ============================= */
 
+/* ---------- LARGE SCREENS / DEFAULT ---------- */
+.items,
+.imagecards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 3rem;
+  justify-items: center;
+}
+
 /* ---------- TABLETS ---------- */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .header {
-    padding: 20px 5%;
+    padding: 20px 6%;
   }
 
   .navbar a {
-    font-size: 20px;
+    font-size: 22px;
     margin: 0 10px;
   }
 
   .home-content h3 {
-    font-size: 45px;
+    font-size: 50px;
   }
 
   .home-content p {
-    font-size: 35px;
+    font-size: 38px;
   }
 
-  .items {
-    grid-template-columns: repeat(2, 1fr);
+  .items,
+  .imagecards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
     padding: 2rem;
   }
 
-  .imagecards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .discount h3 {
-    font-size: 32px;
+    font-size: 34px;
   }
 
   .discount p {
     font-size: 18px;
-    max-width: 400px;
+    max-width: 450px;
   }
 
   .explorebar a {
@@ -345,10 +353,10 @@ font-size: 40px;
   }
 }
 
-/* ---------- PHONES ---------- */
+/* ---------- SMALL TABLETS / LARGE PHONES ---------- */
 @media (max-width: 768px) {
 
-  /* Hide main navbar and show menu icon */
+  /* Navbar responsiveness */
   .navbar {
     display: none;
   }
@@ -358,45 +366,48 @@ font-size: 40px;
   }
 
   .header {
-    padding: 15px 5%;
+    padding: 18px 5%;
   }
 
   .logo {
     font-size: 18px;
   }
 
+  /* Hero section */
   .home {
     height: 100vh;
     background-position: center;
   }
 
   .home-content {
-    top: 35%;
-    left: 5%;
+    top: 38%;
+    left: 6%;
     text-align: left;
   }
 
   .home-content h3 {
-    font-size: 38px;
+    font-size: 40px;
   }
 
   .home-content p {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .btn {
-    font-size: 14px;
-    padding: 8px 20px;
+    font-size: 15px;
+    padding: 10px 22px;
   }
 
-  .items {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  /* Cards & images grid */
+  .items,
+  .imagecards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     padding: 1.5rem;
   }
 
   .card img {
-    height: 250px;
+    height: 260px;
   }
 
   .discount {
@@ -405,35 +416,38 @@ font-size: 40px;
   }
 
   .discount h3 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .discount p {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .explorebar {
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 18px;
   }
 
   .explorebar a {
     font-size: 20px;
   }
-
-  .imagecards {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .imgcard1 img {
-    border-radius: 8px;
-  }
 }
 
 /* ---------- SMALL PHONES ---------- */
 @media (max-width: 480px) {
+  .header {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .home-content {
+    top: 35%;
+    left: 5%;
+  }
+
   .home-content h3 {
     font-size: 32px;
   }
@@ -452,23 +466,62 @@ font-size: 40px;
     margin: 20px 0 10px;
   }
 
-  .card {
+  /* Cards stay in 2 columns */
+  .items,
+  .imagecards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
     padding: 1rem;
   }
 
+  .card {
+    padding: 0.8rem;
+  }
+
   .card img {
-    height: 220px;
+    height: 200px;
+  }
+
+  .discount {
+    height: auto;
+    padding: 2rem 1rem;
   }
 
   .discount h3 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .discount p {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .explorebar a {
     font-size: 18px;
+  }
+}
+
+/* ---------- ULTRA SMALL (old phones or very narrow screens) ---------- */
+@media (max-width: 360px) {
+  .home-content h3 {
+    font-size: 26px;
+  }
+
+  .home-content p {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .items,
+  .imagecards {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .card img {
+    height: 160px;
   }
 }
