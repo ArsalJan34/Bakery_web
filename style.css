@@ -299,3 +299,176 @@ font-size: 40px;
     display: block;
     transition: transform 0.3s ease;
 }
+/* ============================= */
+/* 📱 RESPONSIVE DESIGN SECTION */
+/* ============================= */
+
+/* ---------- TABLETS ---------- */
+@media (max-width: 992px) {
+  .header {
+    padding: 20px 5%;
+  }
+
+  .navbar a {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+
+  .home-content h3 {
+    font-size: 45px;
+  }
+
+  .home-content p {
+    font-size: 35px;
+  }
+
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+
+  .imagecards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .discount h3 {
+    font-size: 32px;
+  }
+
+  .discount p {
+    font-size: 18px;
+    max-width: 400px;
+  }
+
+  .explorebar a {
+    font-size: 22px;
+  }
+}
+
+/* ---------- PHONES ---------- */
+@media (max-width: 768px) {
+
+  /* Hide main navbar and show menu icon */
+  .navbar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .header {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .home {
+    height: 100vh;
+    background-position: center;
+  }
+
+  .home-content {
+    top: 35%;
+    left: 5%;
+    text-align: left;
+  }
+
+  .home-content h3 {
+    font-size: 38px;
+  }
+
+  .home-content p {
+    font-size: 28px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  .items {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .card img {
+    height: 250px;
+  }
+
+  .discount {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .discount h3 {
+    font-size: 30px;
+  }
+
+  .discount p {
+    font-size: 16px;
+  }
+
+  .explorebar {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .explorebar a {
+    font-size: 20px;
+  }
+
+  .imagecards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .imgcard1 img {
+    border-radius: 8px;
+  }
+}
+
+/* ---------- SMALL PHONES ---------- */
+@media (max-width: 480px) {
+  .home-content h3 {
+    font-size: 32px;
+  }
+
+  .home-content p {
+    font-size: 22px;
+  }
+
+  .btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  .sectiontitle1 {
+    font-size: 28px;
+    margin: 20px 0 10px;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card img {
+    height: 220px;
+  }
+
+  .discount h3 {
+    font-size: 24px;
+  }
+
+  .discount p {
+    font-size: 14px;
+  }
+
+  .explorebar a {
+    font-size: 18px;
+  }
+}
