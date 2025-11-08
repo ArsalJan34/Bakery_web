@@ -272,10 +272,15 @@ font-size: 40px;
 }
 .explorebar a {
   font-size: 25px;
-  color:rgb(71, 35, 13) ;
+  color:rgb(148, 57, 0) ;
   font-family: 'Outfit';
   font-weight: bold;
 }
+.explorebar a.active{
+  color:rgb(71, 35, 13);
+  border-bottom: 2px solid rgb(71, 35, 13);
+}
+
 .imagecards{
   display: grid;
     grid-template-columns: repeat(4, 1fr);
