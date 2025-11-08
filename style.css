@@ -264,3 +264,33 @@ font-size: 40px;
  font-family: 'Short+Stack';
 }
 
+.explorebar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.explorebar a {
+  font-size: 25px;
+  color:rgb(71, 35, 13) ;
+  font-family: 'Outfit';
+  font-weight: bold;
+}
+.imagecards{
+  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 images per row */
+    gap: 0.5rem;
+    /* small space between images */
+    padding: 1rem;
+}
+.imgcard1 img{
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* crops nicely without distortion */
+    border-radius: 10px;
+    /* optional for rounded corners */
+    display: block;
+    transition: transform 0.3s ease;
+}
